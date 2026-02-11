@@ -1,0 +1,11 @@
+
+librosa
+numpy
+scipy
+scikit-learn # For stratified splitting and Logistic Regression classifier
+soundfile    # For handling various audio formats, often a dependency of librosa and good to explicitly have
+
+# Phase 3B Dependencies (Pretrained Audio Embeddings)
+tensorflow    # For VGGish model
+tensorflow-hub # For loading VGGish from TensorFlow Hub
+
