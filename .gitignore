@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+
+# Jupyter Notebook / IPython
+.ipynb_checkpoints
+
+# ========== TRAINING-ONLY FILES (Inference tool needs these) ==========
+# Training scripts - not needed for users
+scripts/train_classifier.py
+scripts/extract_embeddings.py
+scripts/extract_features.py
+scripts/build_dataset_index.py
+scripts/run_all_validations.py
+scripts/validate_data_leakage.py
+scripts/validate_determinism.py
+scripts/validate_embeddings.py
+scripts/validate_inference.py
+scripts/validate_sanity_inputs.py
+
+# Training data - not needed for users
+data/external/
+data/raw/
+newData/
+
+# Training modules - not needed for users
+src/data_utils/
+src/embeddings/embedding_cache.py
+src/feature_extraction/feature_cache.py
+src/feature_extraction/feature_extractor.py
+
+# Generated training artifacts
+data/processed/embeddings/
+data/processed/features/
+data/processed/dataset_index.json
+data/processed/splits.json
+
+# ========== END TRAINING-ONLY FILES ==========
+
+# Logs
+*.log
+
+# TensorFlow Hub cache
+data/tfhub_cache/
+
+# Keep essential inference files
+!scripts/predict_genre.py
+!src/feature_extraction/audio_processor.py
+!src/embeddings/vggish_extractor.py
+!src/modeling/classifier.py
+!data/processed/classifier_model.pkl
